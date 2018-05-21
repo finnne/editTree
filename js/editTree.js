@@ -218,7 +218,7 @@ EditTree.prototype = {
 		// 根据节点深度设置新节点默认名称
 		var nodeName;
 		var deep = Number(node.find('> h6 > .node-text').attr('data-deep'));
-		var add_able = (this.p.addDeep && (this.p.addDeep<deep)) ? false : true;
+		var add_able = (this.p.addDeep==null || (deep<this.p.addDeep)) ? true : false;
 		var pid = node.find('> h6 > .node-text').attr('data-node-id');
 		if(this.p.defaultName instanceof Array){
 			try{
@@ -231,7 +231,7 @@ EditTree.prototype = {
 							<i class="expand-btn '+ this.icon.leaf +'"></i>\
 							<span class="node-text"'
 							+	' data-deep="'+ (deep+1) +'"'
-							+ 	(add_able ? ' data-add-able="false"' : '') 
+							+ 	(add_able ? '' : ' data-add-able="false"') 
 							+	' data-parent-id="'+ pid +'"'
 							+	' data-node-id="0"'
 							+'>'+ nodeName +'</span>\
