@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+	<link rel="stylesheet" type="text/css" href="css/editTree.css">
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/editTree.js"></script>
+</head>
+<body>
+	<div style="padding: 20px;">
+		<div id="treeView">
+		</div>
+	</div>
+</body>
+
+<script>
+
+$(function() {
+	loadTree();
+});
+
+function loadTree() {
+	$('#treeView').empty();
+	$.ajax({
+		url: 'json/treeData.json',
+		dataType: 'json',
+		success: function(res) {
+			var treeData = res.result;
+
+			var et = new EditTree();
+			et.init({
+				container: '#treeView',
+				data: treeData,
+				pidField: 'pid',
+				idField: 'id',
+				nameField: 'name',
+				listField: 'child',
+				addDeep: 2,
+				expandDeep: 2,
+				defaultName: ['新建parent','新建children'],
+				icon:{
+					"expand": 	'glyphicon glyphicon-plus-sign',
+					"fold": 	'glyphicon glyphicon-minus-sign',
+					"leaf": 	'glyphicon glyphicon-leaf',
+					"add": 		'glyphicon glyphicon-plus-sign',
+					"save": 	'glyphicon glyphicon-floppy-saved',
+					"delete": 	'glyphicon glyphicon-floppy-remove',
+					"cancel": 	'glyphicon glyphicon-remove-sign',
+				},
+				addHandler: function(dic, callback){
+					console.log("add", dic);
+					callback(123);
+				},
+				editHandler: function(dic, callback){
+					console.log("edit", dic);
+					callback();
+				},
+				deleteHandler: function(dic, callback){
+					console.log("del", dic);
+					if(dic.child>0){
+						alert('当前节点含有子节点');
+					}
+					else{
+						callback();
+					}
+				},
+				busyHandler: function(){
+					alert('你有其他节点正在编辑!!');
+				}
+			});
+			
+		}, 
+		error: function(err) {
+			console.log('error',err);
+		}
+	});		
+}
+</script>

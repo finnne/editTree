@@ -1,0 +1,128 @@
+{
+    "success":true,
+    "code":0,
+    "result":[
+        {
+            "id": 1,
+            "pid": 0,
+            "name": "root",
+            "modifyAble": true,
+            "addAble": true,
+            "delAble": false,
+            "editAble": false,
+            "child": [
+                {
+                    "id": 11,
+                    "pid": 1,
+                    "name": "parent-11",
+                    "modifyAble": true,
+                    "addAble": true,
+                    "delAble": false,
+                    "editAble": false
+                },
+                {
+                    "id": 12,
+                    "pid": 1,
+                    "name": "parent-12",
+                    "child": [
+                        {
+                            "id": 121,
+                            "pid": 12,
+                            "name": "children-121",
+                            "child": [
+                                {
+                                    "id": 1211,
+                                    "pid": 121,
+                                    "name": "grandchild-1211"
+                                },
+                                {
+                                    "id": 1212,
+                                    "pid": 121,
+                                    "name": "grandchild-1212"
+                                },
+                                {
+                                    "id": 1213,
+                                    "pid": 121,
+                                    "name": "grandchild-1213"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 122,
+                            "pid": 12,
+                            "name": "children-122",
+                            "child": [
+                                {
+                                    "id": 1221,
+                                    "pid": 122,
+                                    "name": "grandchild-1221"
+                                },
+                                {
+                                    "id": 1222,
+                                    "pid": 122,
+                                    "name": "grandchild-1222"
+                                },
+                                {
+                                    "id": 1223,
+                                    "pid": 122,
+                                    "name": "grandchild-1223"
+                                }
+                            ]
+                        }
+                    ] 
+                },
+                {
+                    "id": 13,
+                    "pid": 1,
+                    "name": "parent-13",
+                    "child": [
+                        {
+                            "id": 131,
+                            "pid": 13,
+                            "name": "children-131",
+                            "child": [
+                                {
+                                    "id": 1311,
+                                    "pid": 131,
+                                    "name": "grandchild-1311"
+                                },
+                                {
+                                    "id": 1312,
+                                    "pid": 131,
+                                    "name": "grandchild-1312"
+                                },
+                                {
+                                    "id": 1313,
+                                    "pid": 131,
+                                    "name": "grandchild-1313"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 132,
+                            "pid": 13,
+                            "name": "children-132",
+                            "child": [
+                                {
+                                    "id": 1321,
+                                    "pid": 132,
+                                    "name": "grandchild-1321"
+                                },
+                                {
+                                    "id": 1322,
+                                    "pid": 132,
+                                    "name": "grandchild-1322"
+                                },
+                                {
+                                    "id": 1323,
+                                    "pid": 132,
+                                    "name": "grandchild-1323"
+                                }
+                            ]
+                        }
+                    ] 
+                }
+            ]
+        }
+    ]
+}

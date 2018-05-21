@@ -1,0 +1,181 @@
+.edit-tree{
+	height: 100%;
+}
+.edit-tree *,
+.edit-tree *:before{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+	line-height: 1;
+}
+
+.edit-tree a{
+	text-decoration:none;
+	outline: none;
+}
+.edit-tree dl{
+	position: relative;
+	text-align: left;
+	margin: 0 0 0 40px;
+	display: none;
+	padding: 0 0 20px 0;
+}
+.edit-tree dl.expand{
+	display: block;
+}
+.edit-tree dl > dt{
+	width:1px;
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 34px;
+	border-left: 1px dashed #666666;
+}
+.edit-tree dl > dd{
+	font-size: 0;
+}
+.edit-tree dd:before{
+	content: "";
+	display: inline-block;
+	width:30px;
+	height: 1px;
+	vertical-align: top;
+    margin: 14px 0 0 0;
+	border-top: 1px dashed #666666;
+}
+
+.edit-tree h6{
+	position: relative;
+	display: inline-block;
+	font-weight: normal;
+	font-size: 0;
+	margin: 0;
+}
+.edit-tree .expand-btn{
+	display: inline-block;
+	color: #666666;
+	font-size: 14px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 0 0 4px;
+}
+.edit-tree .node-text{
+	display: inline-block;
+	height: 2em;
+	font-size: 14px;
+	line-height: 2em;
+	color: #428bca;
+	vertical-align: middle;
+	margin: 0 0 0 6px;
+}
+
+.edit-tree .opt-bar{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+.edit-tree .add-btn{
+	display: inline-block;
+	font-size: 14px;
+    cursor: pointer;
+    color: #428bca;
+	vertical-align: middle;
+	margin: 0 0 0 6px;
+}
+.edit-tree .del-btn{
+	display: inline-block;
+	font-size: 14px;
+    cursor: pointer;
+    color: #428bca;
+	vertical-align: middle;
+	margin: 0 0 0 6px;
+}
+
+.edit-tree .input-bar{
+	display: inline-block;
+	position: absolute;
+	left: 18px;
+	top: 50%;
+	width: 200px;
+    margin: -12px 0 0 0;
+    font-size:0;
+}
+.edit-tree .input-bar > .save-btn,
+.edit-tree .input-bar > .cancel-btn{
+	font-size: 16px;
+	color: #428bca;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 0 0 6px;
+}
+.edit-tree .input-bar > input{
+	width: 120px;
+	height: 24px;
+	vertical-align: middle;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    padding: 0 5px;
+    margin: 0 0 0 4px;
+    display: inline-block;
+    color: #666666;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #fafafa;
+}
+.edit-tree .transparent{
+	opacity: 0;
+}
+.edit-tree .un-modify{
+	color: #999999;
+}
+.edit-tree .un-operate{
+	color: #666666;
+}
+.edit-tree .tree-icon:before{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    font-family: Arial;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.edit-tree .icon-expand:before{
+	content: "+";
+	font-size: 18px;
+	border: 1px solid #666666;
+}
+.edit-tree .icon-fold:before{
+	content: "-";
+	font-size: 18px;
+	line-height: 14px;
+	border: 1px solid #666666;
+}
+.edit-tree .icon-leaf:before{
+	content: "♠";
+	border: 1px solid #666666;
+}
+.edit-tree .icon-add:before{
+	content: "✚";
+	border: 1px solid #428bca;
+}
+.edit-tree .icon-delete:before{
+	content: "✖";
+	border: 1px solid #428bca;
+}
+.edit-tree .icon-save:before{
+	content: "✔";
+	border: 1px solid #428bca;
+}
+.edit-tree .icon-cancel:before{
+	content: "✘";
+	border: 1px solid #428bca;
+}
